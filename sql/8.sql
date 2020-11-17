@@ -1,0 +1,1 @@
+select course from programmes group by course having count(course)=1;

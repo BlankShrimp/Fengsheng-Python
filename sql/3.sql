@@ -1,0 +1,1 @@
+select student, min(grade) as min, max(grade) as max, count(course) as count from exams group by student having avg(grade)>75;

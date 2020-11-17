@@ -1,0 +1,1 @@
+select students.uun from students where not exists (select * from exams where students.uun = exams.student);

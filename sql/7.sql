@@ -1,0 +1,1 @@
+select u.course from (select course from degrees inner join programmes on degrees.code=programmes.degree where type='UG') as u inner join (select course from degrees inner join programmes on degrees.code=programmes.degree where type='PG') as p on u.course=p.course group by u.course;

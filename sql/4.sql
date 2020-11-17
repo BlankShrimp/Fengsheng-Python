@@ -1,0 +1,1 @@
+select student from exams group by student having count(case when grade<40 then 1 else null end)*1.0/count(*)>0.3;

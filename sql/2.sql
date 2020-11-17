@@ -1,0 +1,1 @@
+select count(students.uun) from students inner join degrees on type='PG';

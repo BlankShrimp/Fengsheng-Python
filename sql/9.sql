@@ -1,0 +1,1 @@
+select moreexam.student,moreexam.date from (select student,min(date) as mindate from exams group by student) as mindate inner join (select student,date from exams group by student,date having count(student)>1 and count(date)>1) as moreexam on moreexam.student=mindate.student and moreexam.date=mindate.mindate;

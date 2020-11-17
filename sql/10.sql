@@ -1,0 +1,1 @@
+select * from students where not exists(select * from (select course from programmes where programmes.degree=students.degree) as allexams where not exists (select * from exams where students.uun=exams.student and allexams.course=exams.course));

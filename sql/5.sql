@@ -1,0 +1,1 @@
+select t.code as degree, sum(case when credits is null then 0 else credits end) as sum from (programmes right join degrees on degrees.code=programmes.degree) t left join courses on t.course=courses.code group by t.code;
